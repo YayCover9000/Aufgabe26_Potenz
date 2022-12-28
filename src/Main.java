@@ -12,10 +12,12 @@ public class Main {
     public static int berechnungPotenz(int basis, int potenz){
         int ergebnis = 0;
         int speicher;
+/*
         if(basis < 0 || potenz < 0){
             System.out.println("Eingabe negativ, try again");
             return 0;
         }
+*/
 /*
         while()
 */
