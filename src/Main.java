@@ -10,7 +10,9 @@ public class Main {
         double potenz = sc.nextInt();
         double potenziert = Main.berechnungPotenz(basis, potenz);
         int potenziertGerundet = (int) potenziert;
-        System.out.println("Ergebnis ist: " + potenziertGerundet);
+            System.out.println("Ergebnis ist: " + potenziertGerundet);
+        double testTreiberErgebnis = Main.testTreiber(basis, potenz);
+        System.out.println("TestTreiberErgebnis ist : " + testTreiberErgebnis);
     }
     public static double berechnungPotenz(double basis, double potenz){
         double ergebnis = 0;
@@ -32,5 +34,8 @@ public class Main {
         }
         return ergebnis;
     }
-
+    public static double testTreiber(double basis, double potenz)   {
+        double ergebnis = Math.pow(basis, potenz);
+        return ergebnis;
+    }
 }
