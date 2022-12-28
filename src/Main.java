@@ -1,24 +1,30 @@
 import java.util.Scanner;
+import java.lang.Math;
 public class Main {
     public static void main(String[] args) {
         System.out.println("Hello world!");
         Scanner sc = new Scanner(System.in);
             System.out.println("Basis pls");
-        int basis = sc.nextInt();
+        double basis = sc.nextInt();
             System.out.println("Potenz pls");
-        int potenz = sc.nextInt();
-        int potenziert = Main.berechnungPotenz(basis, potenz);
-        System.out.println("Ergebnis ist: " + potenziert);
+        double potenz = sc.nextInt();
+        double potenziert = Main.berechnungPotenz(basis, potenz);
+        int potenziertGerundet = (int) potenziert;
+        System.out.println("Ergebnis ist: " + potenziertGerundet);
     }
-    public static int berechnungPotenz(int basis, int potenz){
-        int ergebnis = 0;
+    public static double berechnungPotenz(double basis, double potenz){
+        double ergebnis = 0;
         int speicher;
         if(basis < 0 || potenz < 0){
             System.out.println("Eingabe negativ, try again");
             return 0;
         }
         int i = 1;
-        int basisSPeicher = basis;
+        if(potenz == 0){
+            ergebnis = 1;
+            return ergebnis;
+        }
+        double basisSPeicher = basis;
         while(i <= (potenz-1)) {
             ergebnis = (basis * basisSPeicher);
             basis = ergebnis;
