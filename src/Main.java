@@ -8,6 +8,7 @@ public class Main {
             System.out.println("Potenz pls");
         int potenz = sc.nextInt();
         int potenziert = Main.berechnungPotenz(basis, potenz);
+        System.out.println("Ergebnis ist: " + potenziert);
     }
     public static int berechnungPotenz(int basis, int potenz){
         int ergebnis = 0;
@@ -16,9 +17,13 @@ public class Main {
             System.out.println("Eingabe negativ, try again");
             return 0;
         }
-/*
-        while()
-*/
+        int i = 1;
+        int basisSPeicher = basis;
+        while(i <= (potenz-1)) {
+            ergebnis = (basis * basisSPeicher);
+            basis = ergebnis;
+            i++;
+        }
         return ergebnis;
     }
 
